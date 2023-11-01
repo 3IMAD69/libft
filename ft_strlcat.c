@@ -6,14 +6,14 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:20:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/01 10:34:00 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/01 11:21:10 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    	unsigned int	i;
+    unsigned int	i;
 	int				dst_len;
 
 	i = 0;
@@ -25,15 +25,4 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	dst[dst_len + i] = '\0';
 	return (size);
-}
-
-#include <stdio.h>
-int main()
-{
-    char src[] = "imad dhaimy";
-    char dst[20] = "my name is ";
-    strlcpy(dst,src,12);
-    printf("src : %s\n",src);
-    printf("dst : %s\n",dst);
-    
 }
