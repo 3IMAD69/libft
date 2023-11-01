@@ -6,13 +6,13 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:58:11 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/10/31 16:58:14 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/01 10:33:46 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
     unsigned char *ss = (unsigned char *)s;
     while(n-- > 0)

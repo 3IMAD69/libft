@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: idhaimy <idhaimy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:49:42 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/10/31 15:36:14 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/10/31 18:57:55 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ size_t ft_strlen (const char *s)
     i = 0;
     while(s[i])
         i++;
-    return (i);    
+    return (i);  
 }
