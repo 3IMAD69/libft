@@ -6,12 +6,11 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:41:24 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/02 17:29:50 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/02 19:55:16 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int check_if_set(char c, char const *set)
 {
@@ -24,36 +23,42 @@ int check_if_set(char c, char const *set)
     return (0);
 }
 
+int get_str_size(char *str,char const *set)
+{
+    int i;
+    int j;
+    int size;
+    
+    i = 0;
+    size = 0;
+    j = ft_strlen(str) - 1;
+    while(check_if_set(str[i],set) == 1 && str[i] != '\0')
+    {
+        size++;
+        i++;
+    }
+    while(check_if_set(str[j],set) == 1)
+    {
+        str[j] = '\0';
+        size++;
+        j--;
+    }
+    return (size);
+}
 char *ft_strtrim(char const *s1, char const *set)
 {
-    int size;
+    char *tmp_str; 
+    char *trim ;
     int i;
-    char *trim;
     
-    size = 0;
     i = 0;
-    while(s1[i])
-    {
-        if (check_if_set(s1[i],set) == 1)
-            size++;
-        i++;   
-    }
-    trim = (char *)malloc((ft_strlen(s1) - size + 1) * sizeof(char));
+    tmp_str = ft_strdup(s1);
+    printf("size  = %d\n",get_str_size(tmp_str,set));
+    trim = (char *)malloc((ft_strlen(s1) - get_str_size(tmp_str,set) + 1) * sizeof(char));
     if (!trim)
         return (0);
-    i = 0;
-    while(*s1)
-    {
-        if (check_if_set(*s1,set) == 0)
-            trim[i++] = *s1;
-        s1++;
-    }
-    trim[i] = '\0'; 
+    while(check_if_set(tmp_str[i],set) == 1)
+        i++;
+    trim = &tmp_str[i];
     return (trim);
-}
-
-int main()
-{
-    char * str = ft_strtrim("abcdba","acb");
-    printf("%s\n",str);
 }
