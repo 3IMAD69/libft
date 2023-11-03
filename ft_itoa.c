@@ -6,13 +6,11 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:43:46 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 14:04:03 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/03 15:12:44 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <limits.h>
 
 char* write_to_arr(char *arr,unsigned int n,int pos,int size)
 {
@@ -76,10 +74,4 @@ char *ft_itoa(int n)
         
     arr = ft_strrev(arr);
     return(arr); 
-}
-
-int main()
-{
-    char *str = ft_itoa(0);
-    printf("%s",str);
 }
