@@ -6,12 +6,11 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:11:26 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 11:41:37 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/03 12:01:28 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char **wrtie_to_arr(char const *s,char **arr,char *tmp_str)
 {
@@ -55,6 +54,7 @@ char **ft_split(char const *s, char c)
     return(wrtie_to_arr(s,arr,tmp_str));
 }
 
+//#include <stdio.h>
 
 // int main()
 // {
