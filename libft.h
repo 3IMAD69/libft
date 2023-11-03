@@ -2,6 +2,12 @@
 # define LIBFT_H
 
 typedef long unsigned int size_t;
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
 # include <stdlib.h>
 # include <stdint.h>
 # include <unistd.h>
@@ -24,5 +30,9 @@ void ft_putstr_fd(char *s, int fd);
 
 
 int ft_strncmp(const char *s1, const char *s2, size_t n);
+t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+
+
 
 #endif
