@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:31:47 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 22:00:51 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/03 22:22:20 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,19 @@ int ft_lstsize(t_list *lst)
     }
     return (count);
 }
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     t_list *head = NULL;
+//     int i;
+//     for (i = 0 ; i <= 82; i++)
+//     {
+//         t_list *newnode = ft_lstnew(&i);
+//         ft_lstadd_front(&head,newnode);
+//     }
+//     // Call ft_lstsize to get the size of the list
+//     int size = ft_lstsize(head);
+//     printf("Size of the linked list: %d\n", size);
+// }
