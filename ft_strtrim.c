@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:41:24 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/02 19:55:16 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/04 15:11:19 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ char *ft_strtrim(char const *s1, char const *set)
     
     i = 0;
     tmp_str = ft_strdup(s1);
-    printf("size  = %d\n",get_str_size(tmp_str,set));
     trim = (char *)malloc((ft_strlen(s1) - get_str_size(tmp_str,set) + 1) * sizeof(char));
     if (!trim)
         return (0);

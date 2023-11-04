@@ -6,12 +6,12 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:20:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/01 11:21:10 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/04 15:05:49 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-size_t  ft_strlcpy(char *dst, const char *src, size_t size)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
     unsigned int	i;
 	int				dst_len;

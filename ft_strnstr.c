@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:55:14 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/01 18:25:08 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/04 15:08:37 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char *ft_strnstr(const char *big,	const char *little, size_t len)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -57,4 +57,4 @@ int main() {
     }
 
     return 0;
-}
+}*/
