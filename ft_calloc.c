@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:21:07 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/02 11:15:35 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/04 16:12:46 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,8 @@ void *ft_calloc(size_t nmemb, size_t size)
     ptr = malloc(nmemb * size);
     
     if(!ptr)
-    {
-        printf("error malloc");
         return (0);
-    }
     else
-    {
-        printf("malloc khdama");
         ft_bzero(ptr,nmemb * size);
-    }
     return (ptr);
 }
