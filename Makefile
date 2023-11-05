@@ -7,14 +7,17 @@ ft_isascii.c ft_putchar_fd.c ft_strlcat.c ft_tolower.c \
 ft_isdigit.c ft_putendl_fd.c ft_strlcpy.c ft_toupper.c \
 ft_isprint.c ft_putnbr_fd.c ft_strlen.c \
 ft_itoa.c ft_putstr_fd.c ft_strmapi.c
-
 OBJS = $(SRCS:%.c=%.o)
+BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstnew.c ft_lstsize.c
+BONUSOBJS = $(BONUS:%.c=%.o)
 CFLAGS = -Wall -Wextra -Werror
 all:$(LIBRARY)
 $(LIBRARY): $(OBJS)
 	ar -rc $(LIBRARY) $(OBJS)
 %.o: %.c
 	cc -c -o $@ $< $(CFLAGS)
+bonus : $(BONUSOBJS)
+	ar -rc $(LIBRARY) $(BONUSOBJS)
 clean:
 	rm -f $(OBJS)
 fclean:clean
