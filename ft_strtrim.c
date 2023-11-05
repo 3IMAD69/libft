@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:41:24 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/05 18:30:17 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/05 18:51:34 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int get_str_size(char *str,char const *set)
         size++;
         i++;
     }
-    while(check_if_set(str[j],set) == 1)
+    while(check_if_set(str[j],set) == 1 && str[i] != '\0')
     {
         str[j] = '\0';
         size++;
@@ -54,6 +54,13 @@ char *ft_strtrim(char const *s1, char const *set)
     
     i = 0;
     j = 0;
+    if( *s1 == '\0')
+    {
+        trim = (char *)malloc( 1 * sizeof(char));
+        trim[0] = '\0';
+        return (trim);
+    }
+        
     tmp_str = ft_strdup(s1);
     trim = (char *)malloc((ft_strlen(s1) - get_str_size(tmp_str,set) + 1) * sizeof(char));
     if (!trim)
@@ -61,11 +68,7 @@ char *ft_strtrim(char const *s1, char const *set)
     while(check_if_set(tmp_str[i],set) == 1)
         i++;
     while(tmp_str[i] != '\0')
-    {
-        trim[j] = tmp_str[i];
-        j++;
-        i++;
-    }
+        trim[j++] = tmp_str[i++];
     trim[j] = '\0';
     return (trim);
 }
