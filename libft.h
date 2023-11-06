@@ -9,7 +9,6 @@ struct s_list *next;
 } t_list;
 
 # include <stdlib.h>
-# include <stdint.h>
 # include <unistd.h>
 
 int ft_isalpha(int c);
