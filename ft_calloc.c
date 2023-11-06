@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 19:21:07 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/05 15:28:36 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/06 19:06:50 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void *ft_calloc(size_t nmemb, size_t size)
 {
     void *ptr;
     
-    if (nmemb > SIZE_MAX / size)
+    if (nmemb > (size_t)(-1) / size)
         return (0);
         
     ptr = malloc(nmemb * size);
