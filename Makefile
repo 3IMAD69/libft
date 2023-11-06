@@ -8,7 +8,7 @@ ft_isdigit.c ft_putendl_fd.c ft_strlcpy.c ft_toupper.c \
 ft_isprint.c ft_putnbr_fd.c ft_strlen.c \
 ft_itoa.c ft_putstr_fd.c ft_strmapi.c
 OBJS = $(SRCS:%.c=%.o)
-BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstnew.c ft_lstsize.c
+BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstnew.c ft_lstsize.c ft_lstmap.c
 BONUSOBJS = $(BONUS:%.c=%.o)
 CFLAGS = -Wall -Wextra -Werror
 all:$(LIBRARY)
