@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:36:33 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/04 11:44:29 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/06 15:21:35 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
     if (lst == NULL)
         return ;
     current = *lst;
-    while (current->next != NULL)
+    while (current != NULL)
     {
         next = current->next;
         ft_lstdelone(current,del);
