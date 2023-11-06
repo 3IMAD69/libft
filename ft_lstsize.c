@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:31:47 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 22:22:20 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/06 10:42:02 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int ft_lstsize(t_list *lst)
     if(lst == NULL)
         return (0);
     tmp = lst;
-    while (tmp->next != NULL)
+    while (tmp != NULL)
     {
         count++;
         tmp = tmp->next;
