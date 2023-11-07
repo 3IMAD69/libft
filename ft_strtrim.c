@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:41:24 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/05 18:51:34 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/07 19:20:51 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ char *ft_strtrim(char const *s1, char const *set)
         trim[0] = '\0';
         return (trim);
     }
-        
+    if (!set)
+        return (NULL);
     tmp_str = ft_strdup(s1);
     trim = (char *)malloc((ft_strlen(s1) - get_str_size(tmp_str,set) + 1) * sizeof(char));
     if (!trim)
