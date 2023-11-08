@@ -23,53 +23,20 @@ int check_if_set(char c, char const *set)
     return (0);
 }
 
-int get_str_size(char *str,char const *set)
-{
-    int i;
-    int j;
-    int size;
-    
-    i = 0;
-    size = 0;
-    j = ft_strlen(str) - 1;
-    while(check_if_set(str[i],set) == 1 && str[i] != '\0')
-    {
-        size++;
-        i++;
-    }
-    while(check_if_set(str[j],set) == 1 && str[i] != '\0')
-    {
-        str[j] = '\0';
-        size++;
-        j--;
-    }
-    return (size);
-}
 char *ft_strtrim(char const *s1, char const *set)
 {
-    char *tmp_str; 
-    char *trim ;
-    int i;
-    int j;
+    size_t i;
+    size_t j;
     
     i = 0;
-    j = 0;
-    if( *s1 == '\0')
-    {
-        trim = (char *)malloc( 1 * sizeof(char));
-        trim[0] = '\0';
-        return (trim);
-    }
-    if (!set)
+    j = ft_strlen(s1) - 1;
+    if (!set || !s1)
         return (NULL);
-    tmp_str = ft_strdup(s1);
-    trim = (char *)malloc((ft_strlen(s1) - get_str_size(tmp_str,set) + 1) * sizeof(char));
-    if (!trim)
-        return (0);
-    while(check_if_set(tmp_str[i],set) == 1)
+    while (check_if_set(s1[i],set))
         i++;
-    while(tmp_str[i] != '\0')
-        trim[j++] = tmp_str[i++];
-    trim[j] = '\0';
-    return (trim);
+    if (i == ft_strlen(s1))
+        return (ft_strdup(""));
+    while (check_if_set(s1[j],set))
+        j--;
+    return (ft_substr(s1,i,(j - i) + 1));
 }
