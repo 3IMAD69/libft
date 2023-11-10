@@ -21,6 +21,8 @@ size = ft_strlen(s);
 if (start > size)
 {
     str = (char *)malloc(1 * sizeof(char));
+    if (!str)
+        return (0);
     str[0] = '\0';
     return (str);
 }
