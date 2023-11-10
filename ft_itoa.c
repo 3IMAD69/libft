@@ -71,7 +71,8 @@ char *ft_itoa(int n)
     }
     else
         arr = write_to_arr(arr,n,0,size);
-        
+    if (!arr)
+        return (0);
     arr = ft_strrev(arr);
     return(arr); 
 }
