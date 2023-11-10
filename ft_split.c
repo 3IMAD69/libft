@@ -12,7 +12,24 @@
 
 #include "libft.h"
 
-char **wrtie_to_arr(char const *s,char **arr,char *tmp_str,char c)
+char **freeArray(char **arr,char* str)
+{
+    int i;
+
+    i = 0;
+    while (arr[i] != NULL)
+    {
+        free(arr[i]);
+        i++;
+    }
+    free(arr);
+    free(str);
+    return (NULL);
+}
+
+
+
+char **write_to_arr(char const *s,char **arr,char *tmp_str,char c)
 {
     int i;
     int j;
@@ -20,11 +37,21 @@ char **wrtie_to_arr(char const *s,char **arr,char *tmp_str,char c)
     i = 0;
     j = 0;
     if (s[0] != c)
-        arr[j++] = ft_strdup(&tmp_str[0]);
+    {
+        arr[j] = ft_strdup(&tmp_str[0]);
+        if (!arr[j])
+            return (freeArray(arr,tmp_str));
+        j++;
+    }
     while (s[i] != '\0')
     {
         if ((s[i] == c) && (s[i + 1] != c) && (s[i + 1] != '\0'))
-            arr[j++] = ft_strdup(&tmp_str[i + 1]);
+        {
+            arr[j] = ft_strdup(&tmp_str[i + 1]);
+            if (!arr[j])
+                return (freeArray(arr,tmp_str));
+            j++;
+        }
         i++;
     }
     arr[j] = 0;
@@ -40,6 +67,8 @@ char **ft_split(char const *s, char c)
     
     i = 0;
     size  = 0;
+    if(!s)
+        return (NULL);
     tmp_str = ft_strdup(s);
     while (s[i] != '\0')
     {
@@ -51,10 +80,15 @@ char **ft_split(char const *s, char c)
         i++;
     }
     arr = (char **)malloc(sizeof(char *) * (size + 1));
+    if (!arr)
+        return (NULL);
     if (size == 0)
-        arr[0] = '\0';
+        arr[0] = NULL;
     else
-        arr = wrtie_to_arr(s,arr,tmp_str,c);
+    {
+        arr = write_to_arr(s,arr,tmp_str,c);
+    }
+    free(tmp_str);
     return (arr);
 }
 
@@ -64,11 +98,15 @@ char **ft_split(char const *s, char c)
 // {
 //     char **strings;
 //     int i  = 0;
-//     strings = ft_split("  tripouille  42  ",' ');
+//     strings = ft_split("hello!", ' ');
 //     //printf("%d\n",strings[0]);
-//      while (strings[i] != NULL) {
-//         printf("%s\n", strings[i]);
-//         i++;
-//     }
+//     //  while (strings[i] != NULL) {
+//     //     printf("%s\n", strings[i]);
+//     //     i++;
+//     // }
+//     //printf("%d\n",strings[2] == NULL);
+//     for (int i = 0; strings[i] != NULL; ++i)
+// 		free(strings[i]);
+// 	free(strings);
 //     return 0;
 // }
