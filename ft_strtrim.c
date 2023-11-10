@@ -12,31 +12,31 @@
 
 #include "libft.h"
 
-int check_if_set(char c, char const *set)
+int	check_if_set(char c, char const *set)
 {
-    while(*set != '\0')
-    {
-        if(*set == c)
-            return (1);
-        set++;
-    }
-    return (0);
+	while (*set != '\0')
+	{
+		if (*set == c)
+			return (1);
+		set++;
+	}
+	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t i;
-    size_t j;
-    
-    i = 0;
-    j = ft_strlen(s1) - 1;
-    if (!set || !s1)
-        return (NULL);
-    while (check_if_set(s1[i],set))
-        i++;
-    if (i == ft_strlen(s1))
-        return (ft_strdup(""));
-    while (check_if_set(s1[j],set))
-        j--;
-    return (ft_substr(s1,i,(j - i) + 1));
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	if (!set || !s1)
+		return (NULL);
+	while (check_if_set(s1[i], set))
+		i++;
+	if (i == ft_strlen(s1))
+		return (ft_strdup(""));
+	while (check_if_set(s1[j], set))
+		j--;
+	return (ft_substr(s1, i, (j - i) + 1));
 }

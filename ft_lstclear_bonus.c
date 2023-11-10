@@ -12,21 +12,23 @@
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *current;
-    t_list *next;
-    if (lst == NULL)
-        return ;
-    current = *lst;
-    while (current != NULL)
-    {
-        next = current->next;
-        ft_lstdelone(current,del);
-        current = next;
-    }
-    *lst = NULL;
+	t_list	*current;
+	t_list	*next;
+
+	if (!lst || !del)
+		return ;
+	current = *lst;
+	while (current != NULL)
+	{
+		next = current->next;
+		ft_lstdelone(current, del);
+		current = next;
+	}
+	*lst = NULL;
 }
+
 // void del(void *content) {
 //     // Example content deletion function, modify as needed
 //     free(content);
@@ -55,5 +57,5 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 //         printf("The list is not cleared.\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }

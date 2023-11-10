@@ -55,20 +55,13 @@ char	**write_to_arr(char const *s, char **arr, char *tmp_str, char c)
 	return (arr);
 }
 
-char	**ft_split(char const *s, char c)
+int	get_size(char const *s, char *tmp_str, char c)
 {
-	char	*tmp_str;
-	char	**arr;
 	int		i;
-	int		size;
+	size_t	size;
 
 	i = 0;
 	size = 0;
-	if (!s)
-		return (NULL);
-	tmp_str = ft_strdup(s);
-	if (!tmp_str)
-		return(0);
 	while (s[i] != '\0')
 	{
 		if ((s[i] != c) && ((s[i + 1] == c) || (s[i + 1] == '\0')))
@@ -78,35 +71,46 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
+	return (size);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	*tmp_str;
+	char	**arr;
+	int		size;
+
+	size = 0;
+	if (!s)
+		return (NULL);
+	tmp_str = ft_strdup(s);
+	if (!tmp_str)
+		return (0);
+	size = get_size(s, tmp_str, c);
 	arr = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!arr)
-    {
-    	free(tmp_str);
+	{
+		free(tmp_str);
 		return (NULL);
-    }
+	}
 	if (size == 0)
 		arr[0] = NULL;
 	else
-	{
 		arr = write_to_arr(s, arr, tmp_str, c);
-	}
 	free(tmp_str);
 	return (arr);
 }
 
 // #include <stdio.h>
-
 // int main()
 // {
 //     char **strings;
 //     int i  = 0;
-//     strings = ft_split("hello!", ' ');
-//     //printf("%d\n",strings[0]);
-//     //  while (strings[i] != NULL) {
-//     //     printf("%s\n", strings[i]);
-//     //     i++;
-//     // }
-//     //printf("%d\n",strings[2] == NULL);
+//     strings = ft_split("shadow wizard money gang", ' ');
+//      while (strings[i] != NULL) {
+//         printf("%s\n", strings[i]);
+//         i++;
+//     }
 //     for (int i = 0; strings[i] != NULL; ++i)
 // 		free(strings[i]);
 // 	free(strings);

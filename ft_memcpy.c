@@ -12,13 +12,16 @@
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    if (!dest)
-        return (NULL);
-    char *destination = (char *) dest;
-    const char *source = (const char *)src;
-    while(n-- > 0)
-        *destination++ = *source++;
-    return dest;
+	char		*destination;
+	const char	*source;
+
+	destination = (char *)dest;
+	source = (const char *)src;
+	if (!dest)
+		return (NULL);
+	while (n-- > 0)
+		*destination++ = *source++;
+	return (dest);
 }

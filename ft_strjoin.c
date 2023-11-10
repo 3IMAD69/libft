@@ -11,22 +11,20 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-   int size1;
-   int size2;
-   char *newstr;
-   
-   size1 = ft_strlen(s1);
-   size2 = ft_strlen(s2);
-   newstr = (char *)malloc((size1 + size2 + 1) * sizeof(char));
-   if (!newstr)
-    return (0);
-   ft_memcpy(newstr,s1,size1);
-   ft_memcpy(newstr+size1,s2,size2);
-   newstr[size1 + size2] = '\0';
-   return (newstr);
+	int		size1;
+	int		size2;
+	char	*newstr;
+
+	size1 = ft_strlen(s1);
+	size2 = ft_strlen(s2);
+	newstr = (char *)malloc((size1 + size2 + 1) * sizeof(char));
+	if (!newstr)
+		return (0);
+	ft_memcpy(newstr, s1, size1);
+	ft_memcpy(newstr + size1, s2, size2);
+	newstr[size1 + size2] = '\0';
+	return (newstr);
 }
