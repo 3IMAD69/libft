@@ -6,13 +6,13 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:41:24 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/07 19:20:51 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/10 18:26:05 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_if_set(char c, char const *set)
+static int	check_if_set(char c, char const *set)
 {
 	while (*set != '\0')
 	{

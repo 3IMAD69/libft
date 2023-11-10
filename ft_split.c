@@ -6,13 +6,13 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:11:26 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/05 18:05:57 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/10 18:25:28 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**freearray(char **arr)
+static char	**freearray(char **arr)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ char	**freearray(char **arr)
 	return (NULL);
 }
 
-char	**write_to_arr(char const *s, char **arr, char *tmp_str, char c)
+static char	**write_to_arr(char const *s, char **arr, char *tmp_str, char c)
 {
 	int	i;
 	int	j;

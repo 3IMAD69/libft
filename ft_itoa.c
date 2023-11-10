@@ -6,13 +6,13 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:43:46 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 15:12:44 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/10 18:24:17 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*write_to_arr(char *arr, unsigned int n, int pos, int size)
+static char	*write_to_arr(char *arr, unsigned int n, int pos, int size)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ char	*write_to_arr(char *arr, unsigned int n, int pos, int size)
 	return (arr);
 }
 
-char	*ft_strrev(char *str)
+static char	*ft_strrev(char *str)
 {
 	int		i;
 	int		size;
