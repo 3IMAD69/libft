@@ -1,18 +1,4 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: cedmulle <cedmulle@student.42lausanne.c    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/03 13:34:59 by cedmulle          #+#    #+#              #
-#    Updated: 2023/10/09 17:43:29 by cedmulle         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
-# ---------------------------------------------------------------------------- #
-# 								Variables									   #
-# ---------------------------------------------------------------------------- #
 SRC		= ft_isalpha.c ft_isalnum.c ft_isdigit.c ft_isascii.c \
 				ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c \
 				ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c \
@@ -26,37 +12,28 @@ OBJ		= ${SRC:.c=.o}
 SRCB	= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
 				ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
 				ft_lstmap_bonus.c
+
 OBJB	= ${SRCB:.c=.o}
 
 CFLAGS	= -Wall -Werror -Wextra
-HEAD	= libft.h
 CC		= gcc
-AR		= ar rcs
-RM		= rm -f
 NAME	= libft.a
-# ---------------------------------------------------------------------------- #
-# 									Regles								       #
-# ---------------------------------------------------------------------------- #
+
 all:		${NAME}
 
 ${NAME}:	${OBJ}
-	@${AR} ${NAME} ${OBJ}
-	@echo "Compilation successful."
-	@echo "Library created."
+	ar rcs ${NAME} ${OBJ}
 
-%.o:		%.c ${HEAD}
+%.o:		%.c 
 	@${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-	@${RM} ${OBJ} ${OBJB}
-	@echo "Objects files deleted."
+	rm -f ${OBJ} ${OBJB}
 
 fclean:		clean
-	@${RM} ${NAME}
-	@echo "The ${NAME} deleted."
+	rm -f ${NAME}
 
 re:			fclean all
 
 bonus:		${OBJB}
-	@${AR} ${NAME} ${OBJB}
-	@echo "Bonus added."
+	ar rcs ${NAME} ${OBJB}
