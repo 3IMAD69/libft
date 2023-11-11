@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:25:39 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/10 19:54:41 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/11 13:10:38 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (!dest && !src)
 		return (NULL);
 	destination = (unsigned char *)dest;
-	source = (unsigned char *)src;1
+	source = (unsigned char *)src;
 	if (source < destination)
 	{
 		while (n > 0)
