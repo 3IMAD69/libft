@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:36:33 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/06 15:21:35 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/11 16:44:07 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,33 +29,46 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 }
 
-// void del(void *content) {
-//     // Example content deletion function, modify as needed
-//     free(content);
-// }
 
-// int main() {
-//     // Create a linked list with some content (e.g., integers)
-//     t_list *head = (t_list *)malloc(sizeof(t_list));
-//     head->content = malloc(sizeof(int));
-//     *(int *)(head->content) = 42;
+/*#include <stdio.h>
+void del(void *content) {
+    free(content);
+}
+void print_list(t_list *lst)
+{
+    while (lst != NULL)
+    {
+        printf("%d ", *(int *)(lst->content)); 
+        lst = lst->next;
+    }
+    printf("\n");
+}
+int main() {
 
-//     t_list *second = (t_list *)malloc(sizeof(t_list));
-//     second->content = malloc(sizeof(int));
-//     *(int *)(second->content) = 55;
+    t_list *head = (t_list *)malloc(sizeof(t_list));
+    head->content = malloc(sizeof(int));
+    *(int *)(head->content) = 42;
 
-//     head->next = second;
-//     second->next = NULL;
+    t_list *second = (t_list *)malloc(sizeof(t_list));
+    second->content = malloc(sizeof(int));
+    *(int *)(second->content) = 55;
 
-//     // Clear the list and set the head pointer to NULL
-//     ft_lstclear(&head, del);
+    head->next = second;
+    second->next = NULL;
 
-//     // Verify that the list is cleared (head is NULL)
-//     if (head == NULL) {
-//         printf("The list has been cleared.\n");
-//     } else {
-//         printf("The list is not cleared.\n");
-//     }
+	//before 
+	print_list(head);
+    
+	ft_lstclear(&head, del);
 
-//     return (0);
-// }
+	//after
+	print_list(head);
+    // Verify that the list is cleared (head is NULL)
+    if (head == NULL) {
+        printf("The list has been cleared.\n");
+    } else {
+        printf("The list is not cleared.\n");
+    }
+
+    return (0);
+}*/
