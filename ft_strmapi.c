@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:15:23 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 15:34:55 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 17:10:52 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	newstr = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!newstr)
 		return (0);

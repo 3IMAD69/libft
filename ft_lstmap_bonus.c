@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:31:42 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/12 10:16:44 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 15:58:53 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			free(tmp_cont);
 			free(newnode);
 			ft_lstclear(&newlist, del);
+			return (NULL);
 		}
 		else
 			ft_lstadd_back(&newlist, newnode);

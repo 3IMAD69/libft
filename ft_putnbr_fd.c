@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:37:23 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/03 16:51:18 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 17:03:31 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
