@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:41:24 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/10 18:26:05 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 11:00:48 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 
 	i = 0;
-	j = ft_strlen(s1) - 1;
 	if (!set || !s1)
 		return (NULL);
+	j = ft_strlen(s1) - 1;
 	while (check_if_set(s1[i], set))
 		i++;
 	if (i == ft_strlen(s1))

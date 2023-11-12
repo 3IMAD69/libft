@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:40:20 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/05 17:15:54 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 11:01:15 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	size = ft_strlen(s);
 	if (start > size)
 	{
