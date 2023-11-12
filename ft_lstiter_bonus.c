@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:46:35 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/11 16:42:59 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 10:01:15 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 //     // Test the ft_lstiter function
 //     ft_lstiter(head, iterate_and_print);
 
-//     return 0;
+//     return (0);
 // }

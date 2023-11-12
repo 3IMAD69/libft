@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:25:41 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/11 16:25:01 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 10:00:41 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		llast->next = new;
 }
 
-
 // #include <stdio.h>
-
 
 // void print_list(t_list *lst)
 // {
 //     while (lst != NULL)
 //     {
-//         printf("%d ", *((int *)lst->content)); 
+//         printf("%d ", *((int *)lst->content));
 //         lst = lst->next;
 //     }
 //     printf("\n");
@@ -56,7 +54,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 //     *((int *)node3->content) = 99;
 //     node3->next = NULL;
 
-    
 //     t_list *list = NULL;
 
 //     ft_lstadd_back(&list, node1);
@@ -73,5 +70,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 //         free(temp);
 //     }
 
-//     return 0;
+//     return (0);
 // }

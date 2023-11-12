@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:36:33 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/11 16:44:07 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 10:01:06 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,46 +29,45 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 }
 
-
 /*#include <stdio.h>
-void del(void *content) {
-    free(content);
+void	del(void *content) {
+	free(content);
 }
-void print_list(t_list *lst)
+void	print_list(t_list *lst)
 {
-    while (lst != NULL)
-    {
-        printf("%d ", *(int *)(lst->content)); 
-        lst = lst->next;
-    }
-    printf("\n");
+	while (lst != NULL)
+	{
+		printf("%d ", *(int *)(lst->content));
+		lst = lst->next;
+	}
+	printf("\n");
 }
-int main() {
+int	main(void) {
 
-    t_list *head = (t_list *)malloc(sizeof(t_list));
-    head->content = malloc(sizeof(int));
-    *(int *)(head->content) = 42;
+	t_list *head = (t_list *)malloc(sizeof(t_list));
+	head->content = malloc(sizeof(int));
+	*(int *)(head->content) = 42;
 
-    t_list *second = (t_list *)malloc(sizeof(t_list));
-    second->content = malloc(sizeof(int));
-    *(int *)(second->content) = 55;
+	t_list *second = (t_list *)malloc(sizeof(t_list));
+	second->content = malloc(sizeof(int));
+	*(int *)(second->content) = 55;
 
-    head->next = second;
-    second->next = NULL;
+	head->next = second;
+	second->next = NULL;
 
-	//before 
+	//before
 	print_list(head);
-    
+
 	ft_lstclear(&head, del);
 
 	//after
 	print_list(head);
-    // Verify that the list is cleared (head is NULL)
-    if (head == NULL) {
-        printf("The list has been cleared.\n");
-    } else {
-        printf("The list is not cleared.\n");
-    }
+	// Verify that the list is cleared (head is NULL)
+	if (head == NULL) {
+		printf("The list has been cleared.\n");
+	} else {
+		printf("The list is not cleared.\n");
+	}
 
-    return (0);
+	return (0);
 }*/

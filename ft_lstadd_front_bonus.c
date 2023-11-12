@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:56:13 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/11 16:24:26 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/12 10:01:00 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // {
 //     while (lst != NULL)
 //     {
-//         printf("%d ", *(int *)(lst->content)); 
+//         printf("%d ", *(int *)(lst->content));
 //         lst = lst->next;
 //     }
 //     printf("\n");
@@ -55,10 +55,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 //     ft_lstadd_front(&list, node2);
 //     ft_lstadd_front(&list, node3);
 
-    
 //     print_list(list);
 
-   
 //     while (list != NULL)
 //     {
 //         t_list *temp = list;
@@ -67,5 +65,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 //         free(temp);
 //     }
 
-//     return 0;
+//     return (0);
 // }
