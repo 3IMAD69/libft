@@ -37,3 +37,5 @@ re:			fclean all
 
 bonus:		${OBJB}
 	ar rcs ${NAME} ${OBJB}
+
+.PHONY: all bonus clean fclean re
