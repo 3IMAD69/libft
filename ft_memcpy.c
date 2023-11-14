@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:01:34 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/10 19:48:22 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/14 15:58:28 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (0);
+	if (src == dest)
+		return ((void *)src);
 	destination = (unsigned char *)dest;
 	source = (unsigned char *)src;
 	while (n-- > 0)
