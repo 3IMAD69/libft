@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:31:42 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/12 15:58:53 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/15 16:19:20 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,53 +50,33 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 // void	*f(void	*content)
 // {
-// 	return ((void *) ft_strlen(content));
+// 	return ((void *) ft_strdup((char *)content+5));
+// }
+
+// void printlist(t_list *lst)
+// {
+// 	while(lst)
+// 	{
+// 		printf("%s \n",(char *)lst->content);
+// 		lst = lst->next;
+// 	}
 // }
 
 // int main()
 // {
-// 	t_list	*node1;
-// 	t_list	*node2;
-// 	t_list	*node3;
-// 	t_list	*node4;
+// 	t_list *head = NULL;
+// 	t_list *newList = NULL;
 
-//     node1 = (t_list *) malloc (sizeof(t_list));
-//     node2 = (t_list *) malloc (sizeof(t_list));
-//     node3 = (t_list *) malloc (sizeof(t_list));
-//     node4 = (t_list *) malloc (sizeof(t_list));
+// 	t_list *node1 = ft_lstnew(ft_strdup("node 1"));
+// 	t_list *node2 = ft_lstnew(ft_strdup("node 2"));
+// 	t_list *node3 = ft_lstnew(ft_strdup("node 3"));
 
-//     node1->content = NULL; // Initialize content pointers
-//     node2->content = NULL;
-//     node3->content = NULL;
-//     node4->content = NULL;
+// 	ft_lstadd_back(&head,node1);
+// 	ft_lstadd_back(&head,node2);
+// 	ft_lstadd_back(&head,node3);
 
-//     node1->next = node2;
-//     node2->next = node3;
-//     node3->next = node4;
-//     node4->next = NULL;
+// 	printlist(head);
+// 	newList = ft_lstmap(head,f,del);
+// 	printlist(newList);
 
-//     node1->content = ft_strdup("ana node 1");
-//     node2->content = ft_strdup("ana ghankun node 2");
-//     node3->content = ft_strdup("idan ana node 3");
-//     node4->content = ft_strdup("kys");
-
-//     t_list *r = ft_lstmap(node1, f, del);
-
-//     printf("%d\n", (int) r->content);
-//     t_list *r1 = r->next;
-//     printf("%d\n", (int) r1->content);
-//     t_list *r2 = r1->next;
-//     printf("%d\n", (int) r2->content);
-//     t_list *r3 = r2->next;
-//     printf("%d\n", (int) r3->content);
-
-//     free(node1);
-//     free(node2);
-//     free(node3);
-//     free(node4);
-
-//     free(r);
-//     free(r1);
-//     free(r2);
-//     free(r3);
 // }

@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:09:02 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/11 16:45:22 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/15 16:19:26 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ t_list	*ft_lstlast(t_list *lst)
 		tmp = tmp->next;
 	return (tmp);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     t_list *l = NULL;
-
-//     ft_lstadd_back(&l, ft_lstnew((void*)1));
-//     printf("%d\n",ft_lstlast(l)->content == (void*)1);
-// }

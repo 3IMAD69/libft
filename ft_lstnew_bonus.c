@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:44:49 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/11 16:46:16 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/15 13:35:03 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,3 @@ t_list	*ft_lstnew(void *content)
 	}
 	return (newnode);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     int data = 42; // Example data
-//     t_list *node = ft_lstnew(&data);
-
-//     if (node)
-//     {
-//         printf("Data in the node: %d\n", *(int *)node->content);
-//         free(node);
-//     }
-
-//     return (0);
-// }

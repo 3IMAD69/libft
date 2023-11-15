@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:25:41 by idhaimy           #+#    #+#             */
-/*   Updated: 2023/11/12 10:00:41 by idhaimy          ###   ########.fr       */
+/*   Updated: 2023/11/15 15:59:01 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,51 +24,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		llast->next = new;
 }
-
-// #include <stdio.h>
-
-// void print_list(t_list *lst)
-// {
-//     while (lst != NULL)
-//     {
-//         printf("%d ", *((int *)lst->content));
-//         lst = lst->next;
-//     }
-//     printf("\n");
-// }
-
-// int main(void)
-// {
-//     t_list *node1 = (t_list *)malloc(sizeof(t_list));
-//     node1->content = (int *)malloc(sizeof(int));
-//     *((int *)node1->content) = 42;
-//     node1->next = NULL;
-
-//     t_list *node2 = (t_list *)malloc(sizeof(t_list));
-//     node2->content = (int *)malloc(sizeof(int));
-//     *((int *)node2->content) = 10;
-//     node2->next = NULL;
-
-//     t_list *node3 = (t_list *)malloc(sizeof(t_list));
-//     node3->content = (int *)malloc(sizeof(int));
-//     *((int *)node3->content) = 99;
-//     node3->next = NULL;
-
-//     t_list *list = NULL;
-
-//     ft_lstadd_back(&list, node1);
-//     ft_lstadd_back(&list, node2);
-//     ft_lstadd_back(&list, node3);
-
-//     print_list(list);
-
-//     while (list != NULL)
-//     {
-//         t_list *temp = list;
-//         list = list->next;
-//         free(temp->content);
-//         free(temp);
-//     }
-
-//     return (0);
-// }
